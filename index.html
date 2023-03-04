@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Canvas Draw</title>
+</head>
+<body>
+    <style id="css-main">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: monospace;
+            font-size: 18px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        canvas#canvas-main {
+            background-color: #000;
+        }
+
+        canvas#canvas-main.cursor-16 {
+            cursor: url("./img/brush-circle-gray/16.png") 8 8, default !important;
+        }
+
+        canvas#canvas-main.cursor-24 {
+            cursor: url("./img/brush-circle-gray/24.png") 12 12, default !important;
+        }
+
+        canvas#canvas-main.cursor-32 {
+            cursor: url("./img/brush-circle-gray/32.png") 16 16, default !important;
+        }
+
+        canvas#canvas-main.cursor-40 {
+            cursor: url("./img/brush-circle-gray/40.png") 20 20, default !important;
+        }
+
+        canvas#canvas-main.cursor-48 {
+            cursor: url("./img/brush-circle-gray/48.png") 24 24, default !important;
+        }
+
+        canvas#canvas-main.cursor-56 {
+            cursor: url("./img/brush-circle-gray/56.png") 28 28, default !important;
+        }
+
+        canvas#canvas-main.cursor-64 {
+            cursor: url("./img/brush-circle-gray/64.png") 32 32, default !important;
+        }
+
+        #canvas-size {
+            position: fixed;
+            margin: 5px;
+            color: #fff;
+            bottom: 0;
+            right: 0;
+        }
+
+        #options {
+            background-color: rgba(255, 255, 255, .2);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            margin: 5px;
+            padding: 5px 25px;
+        }
+
+        #options,
+        #options * {
+            box-sizing: border-box;
+        }
+
+        #options #colors,
+        #options #brushes {
+            width: 100%;
+        }
+
+        #options #colors .color {
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+        }
+
+        #options #brushes .brush {
+            background-size: initial;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 64px;
+            height: 64px;
+            display: inline-block;
+        }
+
+        #options #brushes .brush.brush-16 {
+            background-image: url("./img/brush-circle-gray/16.png");
+        }
+
+        #options #brushes .brush.brush-24 {
+            background-image: url("./img/brush-circle-gray/24.png");
+        }
+
+        #options #brushes .brush.brush-32 {
+            background-image: url("./img/brush-circle-gray/32.png");
+        }
+
+        #options #brushes .brush.brush-40 {
+            background-image: url("./img/brush-circle-gray/40.png");
+        }
+
+        #options #brushes .brush.brush-48 {
+            background-image: url("./img/brush-circle-gray/48.png");
+        }
+
+        #options #brushes .brush.brush-56 {
+            background-image: url("./img/brush-circle-gray/56.png");
+        }
+
+        #options #brushes .brush.brush-64 {
+            background-image: url("./img/brush-circle-gray/64.png");
+        }
+    </style>
+
+    <canvas id="canvas-main" class="cursor-16"></canvas>
+
+    <div id="options">
+        <div id="colors">
+            <p>Colors</p>
+            <!-- DYNAMIC -->
+        </div>
+        <div id="brushes">
+            <p>Brush size</p>
+            <!-- DYNAMIC -->
+        </div>
+    </div>
+
+    <div id="canvas-size"></div>
+
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
